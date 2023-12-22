@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rivet Length</title>
+	<link rel="icon" type="image/png" href="./favicon/rivet-favicon.jpg">
+    <meta name="description" content="description"/>
+    <meta name="author" content="Adrian Tudor" />
+    <meta name="keywords" content="Premium Aerotec" />
+	
+	<link 
+		rel="stylesheet" 
+		type="text/css" 
+		href="./css/font-awesome/css/font-awesome.min.css" />
+	
+	<link 
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+		rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+		crossorigin="anonymous">
+	<script 
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+		crossorigin="anonymous"
+		defer></script>
+	
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+	
+	<script src="./javascript/rivet_length.js" defer></script>
+</head>
+<body>
+	
+	<div class="container bg-secondary h-100">
+		<!-- Search Navbar - START -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light rounded-bottom sticky-top">
+			<div class="container-fluid">
+				<a class="navbar-brand ms-2" href="./index.html">Premium Aerotec</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="./PT_codes.html">PT codes</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="./rivet_length.html">Lungime Nit</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./tightening_moment.html">Moment de Strangere</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- Search Navbar - END -->
+		
+		<section class="container-fluid mt-4 h-75 text-center">		 
+			<div class="container bg-light border border-2 border-dark rounded-2 w-75 text-center pt-4 pb-0">
+				<article class="row px-4 mb-1">
+					<div class="col-5 m-2 text-start">
+						<h4 class="h4 fw-bold pt-3 pb-2" >Rivet norm:</h4>
+					</div>
+					<div class="col m-2 d-flex align-items-center">
+						<select class="form-select"  id="norm-code"></select>
+					</div>
+					<div class="col m-2">
+						<img src="" alt="image of rivet" class="img-thumbnail d-none" id="norm-code-img">
+					</div>
+				</article>
+				<article class="row px-4 mb-1">
+					<div class="col-5 m-2">
+						<h4 class="h4 fw-bold pt-3 pb-2 text-start">Rivet material code:</h4>
+					</div>
+					<div class="col m-2 d-flex align-items-center">
+						<select class="form-select" id="material-code"></select>
+					</div>
+					<div class="col m-2 ">
+						<img src="" alt="image of rivet head" class="img-thumbnail d-none" id="material-code-img">
+					</div>
+				</article>
+				<article class="row px-4 mb-1">
+					<div class="col-5 m-2 text-start">
+						<h4 class="h4 fw-bold pb-2 pt-4 mt-2" >Rivet diameter code:</h4>
+					</div>
+					<div class="col m-2 text-start">
+						<label for="inputrivetdiametercod" class="form-label ps-4">-</label>
+						<input type="number" step="1" min="3" id="inputrivetdiametercod" class="form-control mb-2">
+					</div>
+					<div class="col m-2 text-start">
+						<label for="inputrivetdiametermm" class="form-label ps-4">mm</label>
+						<input type="number" step="0.1" min="0" id="inputrivetdiametermm" class="form-control mb-2" placeholder="d">
+					</div>		
+				</article>
+				<article class="row px-4 mb-1">
+					<div class="col-5 m-2 text-start">
+						<h4 class="h4 fw-bold pt-4 mt-2" >Rivet length code:</h4>
+					</div>
+					<div class="col m-2 text-start">
+						<label for="inputrivetlenghtcod" class="form-label ps-4">-</label>
+						<input type="number" step="1" min="0" id="inputrivetlenghtcod" class="form-control mb-2">
+					</div>
+					<div class="col m-2 text-start">
+						<label for="inputrivetlenghtmm" class="form-label ps-4">mm</label>
+						<input type="number" step="0.1" min="1" id="inputrivetlenghtmm" class="form-control mb-2">
+					</div>					
+				</article>
+				<article class="row px-4 mb-4">
+					<div class="col-5 m-2 text-start">
+						<h4 class="h4 fw-bold pt-4 mt-2" >Assembly thickness:</h4>
+					</div>
+					<div class="col m-2 text-start">
+						<label for="inputthicknesslenghtmm" class="form-label ps-4">mm</label>
+						<input type="number" step="0.1" min="1.1" id="inputthicknesslenghtmm" class="form-control mb-2" placeholder="e">
+					</div>					
+				</article>
+				<article class="row mb-5 mt-3 text-center">
+					<div class="col">
+						<button class="btn btn-outline-primary btn-rounded bg-info py-2 px-4 disabled" onclick="calculate()" id="btn-calculate">Calculate</button>
+					</div>					
+				</article>
+				<article class="row mb-1" id="show-results"></article>
+			</div>
+		
+		</section>
+		<!-- Footer -->
+		<footer class="text-white fixed-bottom container rounded-top" style="background-color: #0a4275;">
+			<!-- Grid container -->
+			<section class="row p-3 pb-0" id="database-container">
+				<div class="d-flex justify-content-center align-items-center">
+					<p class="me-3">Load DataBase to use!</p>
+					<label 
+						class="btn btn-outline-light btn-rounded mb-3">						
+							<input type="file" id="uploadRivets" class="d-none"/>						
+							load					
+					</label>
+				
+				</div>
+			</section>
+			<!-- Grid container -->
+		
+			<!-- Copyright -->
+			<section class="row rounded-top p-2" style="background-color: rgba(0, 0, 0, 0.2);">
+				<div class="d-flex justify-content-center align-items-center position-relative">
+				  <p class="text-center m-2" id="copyright-text"></p>
+				   <button type="button" id="database-delete-btn" class="d-none btn btn-outline-danger btn-rounded position-absolute top-50 start-0 translate-middle-y text-danger" onclick="deletRivets()"><i class="fa fa-trash"></i></button>
+				</div>
+			</section>
+			<!-- Copyright -->
+		</footer>
+		<!-- Footer -->
+
+	</div>
+	
+   
+</body>
+</html>

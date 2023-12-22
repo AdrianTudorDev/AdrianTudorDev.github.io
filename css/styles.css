@@ -1,0 +1,50 @@
+:root{
+	--priamry-bg-color: #337ab7;
+	--primary-txt-color: #FFFFFF;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; 
+	font-family: Helvetica, Arial, Sans-Serif;
+}
+body{
+	background: #414042; 
+	height: 100vh;
+}
+
+ #app-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll;	 
+ }
+ 
+#app-container .col-7 {
+	position: fixed;
+	right: 20%;
+	max-width: 40%;
+	max-height: 75%;
+	overflow: scroll;
+}
+
+#app-container::-webkit-scrollbar, #app-container .col-7::-webkit-scrollbar, .h-20::-webkit-scrollbar{
+  display: none;/* Hide scrollbar for Chrome, Safari and Opera */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.PTCodeNumber{
+	width: 120px !important;
+	height: 120px  !important;
+}
+.w-90{
+	width: 90%;
+}
+
+.h-20{
+	height: 90px !important;
+	 overflow-y: scroll !important;	
+}
